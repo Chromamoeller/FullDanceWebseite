@@ -1,11 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",
-    "rootDir": "src",
-    "outDir": "dist",
+    "target": "ES2022", // Für moderne JS-Funktionen
+    "module": "ES2022", // Aktiviert native ESM
+    "moduleResolution": "node", // Oder "nodenext" (wenn du Pakete aus node_modules im ESM-Style brauchst)
+    "esModuleInterop": true, // Ermöglicht default-Import von CommonJS-Paketen wie 'express'
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "skipLibCheck": true,
+    "outDir": "dist",
+    "rootDir": "src"
   }
 }

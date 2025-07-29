@@ -48,6 +48,30 @@ async function main() {
     JOIN participants p ON p.id = a.participant_id
   `);
 
+  // Tänze
+  await db.exec(`
+  CREATE TABLE IF NOT EXISTS dances (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    style TEXT NOT NULL,
+    tempo NUMBER NOT NULL,
+    timeSignature TEXT NOT NULL
+  );
+`);
+  await db.run(`
+  INSERT INTO dances (name, style, tempo, timeSignature) VALUES
+    ('Cha Cha', 'Latein', 30, '4/4'),
+    ('Langsamer Walzer', 'Standard', 30, '3/4'),
+    ('Jive', 'Latein', 42, '4/4'),
+    ('Salsa', 'Latein', 45, '4/4'),
+    ('Wiener Waltz', 'Standard', 60, '3/4'),
+    ('Tango', 'Standard', 30, '4/4'),
+    ('Foxtrot', 'Standard', 50, '4/4'),
+    ('Rumba', 'Latein', 35, '4/4'),
+    ('Samba', 'Latein', 53, '4/4');
+    ('Discofox', 'Standard', 40, '4/4');
+`);
+
   console.log("Anwesenheit:", result);
 }
 
