@@ -2,7 +2,13 @@
 
 <template>
   <div>
-    <p>Hello World</p>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      |
+      <RouterLink to="/anwesenheit">Anwesenheit</RouterLink>
+    </nav>
+
+    <RouterView />
   </div>
 </template>
 
