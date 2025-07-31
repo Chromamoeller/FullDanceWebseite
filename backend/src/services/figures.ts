@@ -1,4 +1,4 @@
-import { Dance } from "./dances";
+import { Dance } from "./dances.js";
 class Figure {
   id: number;
   name: string;

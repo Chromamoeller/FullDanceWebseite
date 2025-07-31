@@ -1,7 +1,7 @@
 export class Dance {
   id: number;
   name: string; // z. B. "Cha Cha", "Langsamer Walzer"
-  style: string; // z. B. "Standard", "Latein", "Show", "Discofox"
+  style: string; // z. B. "Standard", "Latein"
   tempo: number; // z. B. "Langsam", "Mittel", "Schnell"
   timeSignature: string;
 
