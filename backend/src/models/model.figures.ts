@@ -1,37 +1,39 @@
-import { Dance } from "./dances.js";
-class Figure {
-  id: number;
+import { Dance } from "./model.dances.js";
+export enum Difficulty {
+  Beginner = "Beginner",
+  Intermediate = "Intermediate",
+  Advanced = "Advanced",
+}
+
+export class Figure {
+  private id: number;
   name: string;
   dance: Dance;
-  difficulty: string;
+  difficulty: Difficulty;
   timing: string;
   direction: string;
   neededFoot: string;
-  freeFootAferFinish: string;
+  freeFootAfterFinish: string;
   startDancePosition: string;
   endDancePosition: string;
   stepCount: number;
-  aligment: string;
+  alignment: string;
   footwork: string[];
-  //   precedingFigures: number[];
-  //   followingFigures: number[];
 
   constructor(
     id: number,
     name: string,
     dance: Dance,
-    difficulty: string,
+    difficulty: Difficulty,
     timing: string,
     direction: string,
     neededFoot: string,
-    freeFootAferFinish: string,
+    freeFootAfterFinish: string,
     startDancePosition: string,
     endDancePosition: string,
     stepCount: number,
-    aligment: string,
+    alignment: string,
     footwork: string[]
-    // precedingFigures: number[],
-    // followingFigures: number[]
   ) {
     this.id = id;
     this.name = name;
@@ -40,13 +42,11 @@ class Figure {
     this.timing = timing;
     this.direction = direction;
     this.neededFoot = neededFoot;
-    this.freeFootAferFinish = freeFootAferFinish;
+    this.freeFootAfterFinish = freeFootAfterFinish;
     this.startDancePosition = startDancePosition;
     this.endDancePosition = endDancePosition;
     this.stepCount = stepCount;
-    this.aligment = aligment;
+    this.alignment = alignment;
     this.footwork = footwork;
-    // this.precedingFigures = precedingFigures;
-    // this.followingFigures = followingFigures;
   }
 }
