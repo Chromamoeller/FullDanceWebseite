@@ -74,13 +74,13 @@ const getColumnWidth = (index: number) => {
 };
 const backgroundColor = (index: number) => {
   if (expandedIndex.value === null && index === 0)
-    return "bg-gradient-to-r from-blue-100 to-green-100";
+    return "bg-gradient-to-r from-blue-100 to-blue-100";
   if (expandedIndex.value === null && index === 1)
-    return "bg-gradient-to-r from-green-100 to-red-100";
+    return "bg-gradient-to-r from-blue-100 to-blue-100";
   if (expandedIndex.value === null && index === 2)
-    return "bg-gradient-to-r from-red-100 to-yellow-100";
+    return "bg-gradient-to-r from-blue-100 to-red-100";
   if (expandedIndex.value === null && index === 3)
-    return "bg-gradient-to-r from-yellow-100 to-blue-100";
+    return "bg-gradient-to-r from-red-100 to-red-100";
   return "bg-gray-100";
 };
 const backgroundColorExpaned = (index: number) => {

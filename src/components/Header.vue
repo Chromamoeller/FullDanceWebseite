@@ -8,7 +8,11 @@
           <RouterLink to="/Choreography">Choreography</RouterLink>
         </div>
         <div class="w-full flex justify-end">
-          <button>Login</button>
+          <button
+            class="px-2 cursor-pointer hover:bg-gray-200 active:bg-gray-300"
+          >
+            Login
+          </button>
         </div>
       </div>
     </div>
