@@ -5,6 +5,7 @@
       class="w-90 h-15 bg-blue-200 rounded cursor-pointer hover:bg-blue-300 active:bg-blue-400 transition"
     >
       <p class="text-xl">Standard</p>
+      <p class="text-xl">{{ danceStore }}</p>
     </button>
 
     <button
@@ -12,12 +13,10 @@
     >
       <p class="text-xl">Latein</p>
     </button>
-    <button
-      class="self-start px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-    >
-      Speichern
-    </button>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useDanceStore } from "../store/danceStore";
+const danceStore = useDanceStore().dance1;
+</script>

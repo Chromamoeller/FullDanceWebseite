@@ -29,15 +29,17 @@
         </button>
       </div>
     </div>
-    <div class="flex">
-      <label for="count" class="text-xl font-bold mb-2 ml-4"
+    <div class="flex flex-col">
+      <label
+        for="count"
+        class="text-[40px] font-bold mb-2 ml-4 text-center mb-10"
         >Anzahl der Figuren</label
       >
       <input
         type="number"
         id="count"
         placeholder="123"
-        class="bg-gray-200 ml-4"
+        class="bg-white ml-4 rounded-xl px-4 py-2 text-2xl font-bold text-center"
       />
     </div>
   </div>

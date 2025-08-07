@@ -1,13 +1,45 @@
 <template>
-  <div class="p-4 w-full flex flex-col gap-4 z-10">
-    <h2 class="text-xl font-bold">FolgenListe aus einer Komponente</h2>
-    <input type="text" placeholder="Name" class="border p-2 rounded" />
-    <textarea placeholder="Beschreibung" class="border p-2 rounded" />
-    <button
-      class="self-start px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+  <div class="p-4 w-full flex flex-wrap justify-center gap-4 z-10 text-center">
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
     >
-      Speichern
-    </button>
+      Grundschritt 1-3
+    </div>
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
+    >
+      Grundschritt 4-6
+    </div>
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
+    >
+      Grundschritt 1-3
+    </div>
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
+    >
+      Damensolo
+    </div>
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
+    >
+      1-3 Promenade
+    </div>
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
+    >
+      4-6 Promenade
+    </div>
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
+    >
+      1-3 Promenade
+    </div>
+    <div
+      class="w-80 h-20 shadow rounded-2xl text-xl font-bold flex items-center justify-center bg-blue-200 hover:bg-blue-300"
+    >
+      Damensolo
+    </div>
   </div>
 </template>
 
