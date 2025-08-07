@@ -1,5 +1,5 @@
-import {Difficulty, Figure} from "../models/model.figures.js";
-import {Dance} from "../models/model.dances.js";
+import {Difficulty, Figure} from "../models/figures.js";
+import {Dance} from "../models/dances.js";
 
 const chachachaDance = new Dance(2, "Chachacha", "Latein", 120, "4/4");
 

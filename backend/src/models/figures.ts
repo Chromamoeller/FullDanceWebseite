@@ -1,4 +1,4 @@
-import { Dance } from "./model.dances.js";
+import { Dance } from "./dances.js";
 export enum Difficulty {
   Beginner = "Beginner",
   Intermediate = "Intermediate",

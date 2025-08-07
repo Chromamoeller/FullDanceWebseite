@@ -1,14 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Header from "./components/Header.vue";
+</script>
 
 <template>
   <div>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      |
-      <RouterLink to="/anwesenheit">Anwesenheit</RouterLink>
-    </nav>
-
-    <RouterView />
+    <Header />
+    <RouterView class="h-screen" />
   </div>
 </template>
 

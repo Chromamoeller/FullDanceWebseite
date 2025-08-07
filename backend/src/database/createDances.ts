@@ -1,6 +1,6 @@
 import {open} from "sqlite";
 import sqlite3 from "sqlite3";
-import {Dance} from "../models/model.dances.js";
+import {Dance} from "../models/dances.js";
 
 import path from "path";
 import {fileURLToPath} from "url";

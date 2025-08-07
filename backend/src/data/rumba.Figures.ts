@@ -1,11 +1,11 @@
-import { Dance } from "../models/model.dances.js";
-import {Difficulty, Figure} from "../models/model.figures.js";
+import { Dance } from "../models/dances.js";
+import {Difficulty, Figure} from "../models/figures.js";
 
 const rumbaDance = new Dance(2, "Rumba", "Rumba", 104, "4/4");
 
-const rumbaBasicMovement = new Figure(
+const basicMovementOneToThree = new Figure(
     1,
-    "Basic Movement",
+    "Basic Movement 1 to 3",
     rumbaDance,
     Difficulty.Beginner,
     "4/4",
@@ -16,26 +16,26 @@ const rumbaBasicMovement = new Figure(
     "Closed",
     3,
     "Wall",
-    ["Ball Flat", "Ball", "Ball Flat"]
+    ["Ball Flat", "Ball Flat", "Ball Flat"]
 );
 
-const sideStep = new Figure(
+const basicMovementFourToSix = new Figure(
     2,
-    "Side Step",
+    "Basic Movement 4 to 6",
     rumbaDance,
     Difficulty.Beginner,
     "4/4",
     "Side",
-    "Left",
     "Right",
+    "Left",
     "Closed",
     "Closed",
-    2,
+    3,
     "Center",
-    ["Ball", "Ball Flat"]
+    ["Ball Flat", "Ball Flat","Ball Flat"]
 );
 
-const cucaracha = new Figure(
+const underarmTurnToRight = new Figure(
     3,
     "Cucaracha",
     rumbaDance,
@@ -48,7 +48,7 @@ const cucaracha = new Figure(
     "Open",
     4,
     "Wall",
-    ["Ball", "Ball Flat", "Ball", "Ball Flat"]
+    ["Ball Flat", "Ball Flat", "Ball Flat"]
 );
 
 const fan = new Figure(
@@ -64,7 +64,7 @@ const fan = new Figure(
     "Fan",
     6,
     "Center",
-    ["Ball", "Ball", "Ball Flat", "Ball", "Ball Flat", "Ball Flat"]
+    ["Ball Flat", "Ball Flat", "Ball Flat", "Ball Flat", "Ball Flat", "Ball Flat"]
 );
 
 const alemana = new Figure(
@@ -80,13 +80,7 @@ const alemana = new Figure(
     "Closed",
     6,
     "Diagonal Wall",
-    ["Ball Flat", "Ball", "Ball", "Ball Flat", "Ball", "Ball Flat"]
+    ["Ball Flat", "Ball Flat", "Ball Flat", "Ball Flat", "Ball Flat", "Ball Flat"]
 );
 
-export const rumbaFigures = [
-    rumbaBasicMovement,
-    sideStep,
-    cucaracha,
-    fan,
-    alemana
-];
+
