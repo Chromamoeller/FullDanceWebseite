@@ -8,6 +8,8 @@
       :class="[
         'transition-all duration-500 ease-in-out overflow-hidden',
         getColumnWidth(index),
+        backgroundColor(index),
+        backgroundColorExpaned(index),
         'relative flex flex-col items-center justify-center',
       ]"
     >
@@ -69,5 +71,23 @@ const getColumnWidth = (index: number) => {
   if (expandedIndex.value === null) return "w-1/4"; // 25% für alle
   if (expandedIndex.value === index) return "w-1/2"; // 50% für geöffnet
   return "w-1/6"; // 16.6% für alle anderen
+};
+const backgroundColor = (index: number) => {
+  if (expandedIndex.value === null && index === 0)
+    return "bg-gradient-to-r from-blue-100 to-green-100";
+  if (expandedIndex.value === null && index === 1)
+    return "bg-gradient-to-r from-green-100 to-red-100";
+  if (expandedIndex.value === null && index === 2)
+    return "bg-gradient-to-r from-red-100 to-yellow-100";
+  if (expandedIndex.value === null && index === 3)
+    return "bg-gradient-to-r from-yellow-100 to-blue-100";
+  return "bg-gray-100";
+};
+const backgroundColorExpaned = (index: number) => {
+  if (index === 0) return "bg-gradient-to-r from-blue-100 to-green-100";
+  if (index === 1) return "bg-gradient-to-r from-green-100 to-red-100";
+  if (index === 2) return "bg-gradient-to-r from-red-100 to-yellow-100";
+  if (index === 3) return "bg-gradient-to-r from-yellow-100 to-blue-100";
+  return "bg-gray-100";
 };
 </script>
