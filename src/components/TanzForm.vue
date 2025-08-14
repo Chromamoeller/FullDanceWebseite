@@ -2,7 +2,7 @@
   <div class="flex flex-wrap gap-4" v-if="store.filteredDances.length">
     <div
       :class="danceColorClass"
-      class="flex items-center justify-center curser-pointer w-25 h-25 text-center rounded-xl"
+      class="flex items-center justify-center cursor-pointer w-25 h-25 text-center rounded-xl"
       v-for="dance in store.filteredDances"
       :key="dance.name"
       @click="store.setDance(dance.name)"

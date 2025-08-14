@@ -36,13 +36,26 @@
         >Anzahl der Figuren</label
       >
       <input
+        v-model="count"
         type="number"
         id="count"
         placeholder="123"
         class="bg-white ml-4 rounded-xl px-4 py-2 text-2xl font-bold text-center"
       />
+      <button
+        class="w-90 h-15 bg-green-200 rounded-xl cursor-pointer hover:bg-green-300 active:bg-green-400 transition self-end mt-4"
+        @click="danceStore.setCount(count)"
+      >
+        Bestätigen
+      </button>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+import { useDanceStore } from "../store/danceStore";
+
+const danceStore = useDanceStore();
+const count = ref(0);
+</script>

@@ -40,6 +40,7 @@ export const useDanceStore = defineStore("danceStore", () => {
 
   function setCount(count: number) {
     chosenCount.value = count;
+    console.log(count);
   }
 
   return {
