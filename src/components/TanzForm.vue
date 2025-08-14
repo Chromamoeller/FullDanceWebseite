@@ -1,56 +1,27 @@
 <template>
-  <div class="p-4 w-full flex flex-wrap justify-center gap-4 z-10">
+  <div class="flex flex-wrap gap-4" v-if="store.filteredDances.length">
     <div
-      class="w-40 h-20 bg-blue-200 flex justify-center items-center hover:bg-blue-300 hover:cursor-pointer active:bg-blue-400"
+      :class="danceColorClass"
+      class="flex items-center justify-center curser-pointer w-25 h-25 text-center rounded-xl"
+      v-for="dance in store.filteredDances"
+      :key="dance.name"
+      @click="store.setDance(dance.name)"
     >
-      <p>Langsmer Walzer</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-blue-200 flex justify-center items-center hover:bg-blue-300 hover:cursor-pointer active:bg-blue-400"
-    >
-      <p>Wiener Walzer</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-blue-200 flex justify-center items-center hover:bg-blue-300 hover:cursor-pointer active:bg-blue-400"
-    >
-      <p>Tango</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-blue-200 flex justify-center items-center hover:bg-blue-300 hover:cursor-pointer active:bg-blue-400"
-    >
-      <p>Foxtrott</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-blue-200 flex justify-center items-center hover:bg-blue-300 hover:cursor-pointer active:bg-blue-400"
-    >
-      <p>Dicofox</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-red-200 flex justify-center items-center hover:bg-red-300 hover:cursor-pointer active:bg-red-400"
-    >
-      <p>Chachacha</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-red-200 flex justify-center items-center hover:bg-red-300 hover:cursor-pointer active:bg-red-400"
-    >
-      <p>Rumba</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-red-200 flex justify-center items-center hover:bg-red-300 hover:cursor-pointer active:bg-red-400"
-    >
-      <p>Jive</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-red-200 flex justify-center items-center hover:bg-red-300 hover:cursor-pointer active:bg-red-400"
-    >
-      <p>Samba</p>
-    </div>
-    <div
-      class="w-40 h-20 bg-red-200 flex justify-center items-center hover:bg-red-300 hover:cursor-pointer active:bg-red-400"
-    >
-      <p>Salsa</p>
+      <p class="text-xl">
+        {{ dance.name }}
+      </p>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useDanceStore } from "../store/danceStore";
+import { computed } from "vue";
+
+const store = useDanceStore();
+const danceColorClass = computed(() => {
+  if (store.chosenStyle === "Standard") return "bg-blue-200 active:bg-blue-400";
+  if (store.chosenStyle === "Latein") return "bg-red-200 active:bg-red-400";
+  return "bg-gray-100 text-gray-800"; // fallback
+});
+</script>

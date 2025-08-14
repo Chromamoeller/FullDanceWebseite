@@ -43,24 +43,13 @@ import FolgeForm from "../components/FolgeListe.vue";
 import ExpandButton from "../atoms/ExpandButton.vue";
 import { ref } from "vue";
 
-// const columns = [
-//   { title: "Tanzrichtung" },
-//   { title: "Tanz" },
-//   { title: "Level/Anzahl" },
-//   { title: "Folge" },
-// ];
-//Zukunftig
 const columns = [
   { title: "Tanzrichtung", component: TanzrichtungForm },
   { title: "Tanz", component: TanzForm },
   { title: "Level/Anzahl", component: LevelForm },
   { title: "Folge", component: FolgeForm },
 ];
-// <template v-if="expandedIndex === index">
-//   <component :is="column.component" />
-// </template>
 
-// Welches Panel ist aktuell expandiert (nur eins gleichzeitig)
 const expandedIndex = ref<number | null>(null);
 
 const toggle = (index: number) => {
