@@ -38,12 +38,26 @@
         </tr>
       </tbody>
     </table>
+    <button
+      @click="store.fetchAttendance()"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Action
+    </button>
+    <button
+      @click="store.addAttendance(1, false)"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Nicht Anwesend
+    </button>
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import { useAttendanceStore } from "../store/attendanceStore";
 
+const store = useAttendanceStore();
 const people = ref([
   {
     name: "Marcos & Sabine Pineda",

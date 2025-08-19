@@ -1,13 +1,14 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "node --loader ts-node/esm src/index.ts",
+    "dev": "ts-node src/index.ts",
+    "init-db": "ts-node src/database/initDb.ts",
     "build": "tsc",
-    "start": "node dist/server/index.js"
+    "start": "node dist/index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"

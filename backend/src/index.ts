@@ -1,20 +1,17 @@
-import express, { Request, Response } from "express";
-import { db } from "./database/danceTable.js";
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import router from "./routes";
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 
-app.use(express.json());
+// CORS aktivieren → jetzt darf dein Frontend auf die API zugreifen
+app.use(cors({ origin: "http://localhost:5173" }));
 
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello from your modern TypeScript + ESModule Express server 🚀");
-});
+app.use(bodyParser.json());
+app.use("/api", router);
 
 app.listen(PORT, () => {
-  console.log(`Server läuft unter http://localhost:${PORT}`);
-});
-
-app.get("/api/dances", async (req: Request, res: Response) => {
-  const dances = await db.all("SELECT * FROM dances");
-  res.json(dances);
+  console.log(`Server running on http://localhost:${PORT}`);
 });

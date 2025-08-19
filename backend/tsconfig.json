@@ -1,14 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "baseUrl": "./src",
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
+    "module": "CommonJS",
+    "target": "ESNext",
     "esModuleInterop": true,
-    "strict": true,
     "outDir": "dist",
-    "rootDir": "src",
-    "skipLibCheck": true
-  },
-  "include": ["src"]
+    "rootDir": "src"
+  }
 }
