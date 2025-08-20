@@ -38,7 +38,18 @@
         </tr>
       </tbody>
     </table>
-    <button
+    <div>
+      <input class="w-40 h-10 bg-red-200 py-2 my-2 px-2 mx-2" type="text" />
+      <input class="w-40 h-10 bg-red-200 py-2 my-2 px-2 mx-2" type="text" />
+      <input class="w-40 h-10 bg-red-200 py-2 my-2 px-2 mx-2" type="text" />
+      <button
+        @click="store.addAttendance(2, true, '2025-08-18 20:10:00')"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Send Data
+      </button>
+    </div>
+    <!-- <button
       @click="store.fetchAttendance()"
       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     >
@@ -49,13 +60,21 @@
       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
     >
       Nicht Anwesend
-    </button>
+    </button> -->
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
 import { useAttendanceStore } from "../store/attendanceStore";
+
+const fakeData = ref([
+  {
+    customer_id: 4,
+    present: true,
+    present_at: "2025-08-18 20:10:00",
+  },
+]);
 
 const store = useAttendanceStore();
 const people = ref([

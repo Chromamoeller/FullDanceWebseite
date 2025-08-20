@@ -18,10 +18,15 @@ export const useAttendanceStore = defineStore("attendance", {
       console.log(res.data);
     },
 
-    async addAttendance(student_id: number, present: boolean) {
+    async addAttendance(
+      customer_id: number,
+      present: boolean,
+      present_at: string
+    ) {
       const res = await axios.post("http://localhost:3000/api/attendance", {
-        student_id,
+        customer_id,
         present,
+        present_at,
       });
       this.entries.unshift(res.data);
       console.log(res.data);
