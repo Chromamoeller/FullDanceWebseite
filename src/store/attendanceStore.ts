@@ -7,7 +7,7 @@ export const useAttendanceStore = defineStore("attendance", {
       id: number;
       student_id: number;
       present: boolean;
-      created_at: string;
+      present_at: string;
     }[],
   }),
 

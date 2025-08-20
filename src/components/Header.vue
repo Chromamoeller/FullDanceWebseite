@@ -23,7 +23,20 @@
           >
         </div>
         <div class="w-full flex justify-end">
-          <button class="p-2 rounded-xl hover:bg-gray-200">Login</button>
+          <button
+            @click="login"
+            v-if="!isLoggedIn"
+            class="p-2 rounded-xl hover:bg-gray-200"
+          >
+            Login
+          </button>
+          <button
+            @click="logout"
+            v-else="!isLoggedIn"
+            class="p-2 rounded-xl hover:bg-gray-200"
+          >
+            Logout
+          </button>
         </div>
       </div>
     </div>
@@ -31,5 +44,16 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { RouterLink } from "vue-router";
+
+const isLoggedIn = ref(true);
+
+function login() {
+  isLoggedIn.value = true;
+}
+
+function logout() {
+  isLoggedIn.value = false;
+}
 </script>

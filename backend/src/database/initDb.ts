@@ -12,11 +12,12 @@ async function openDb() {
 export async function initDb() {
   const db = await openDb();
 
-  // Tabelle students
+  // Tabelle customer
   await db.exec(`
-    CREATE TABLE IF NOT EXISTS students (
+    CREATE TABLE IF NOT EXISTS customer (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT NOT NULL
+      name TEXT NOT NULL,
+      course_number TEXT NOT NULL
     )
   `);
 
@@ -24,10 +25,10 @@ export async function initDb() {
   await db.exec(`
     CREATE TABLE IF NOT EXISTS attendance (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
-      student_id INTEGER NOT NULL,
-      present INTEGER NOT NULL,
-      created_at TEXT DEFAULT (datetime('now')),
-      FOREIGN KEY (student_id) REFERENCES students(id)
+      customer_id INTEGER NOT NULL,
+      present BOOLEAN NOT NULL,
+      present_at TEXT NOT NULL,
+      FOREIGN KEY (customer_id) REFERENCES customer(id)
     )
   `);
 
